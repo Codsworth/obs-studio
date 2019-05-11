@@ -14,6 +14,7 @@ extern struct obs_source_info duplicator_capture_info;
 extern struct obs_source_info monitor_capture_info;
 extern struct obs_source_info window_capture_info;
 extern struct obs_source_info game_capture_info;
+extern struct obs_source_info ma_monitor_capture_info;
 
 static HANDLE init_hooks_thread = NULL;
 
@@ -88,6 +89,8 @@ bool obs_module_load(void)
 		obs_register_source(&duplicator_capture_info);
 	else
 		obs_register_source(&monitor_capture_info);
+
+	obs_register_source(&ma_monitor_capture_info);
 
 	obs_leave_graphics();
 
