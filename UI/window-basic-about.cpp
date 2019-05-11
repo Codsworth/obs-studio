@@ -27,7 +27,8 @@ OBSAbout::OBSAbout(QWidget *parent)
 			QString::number(LIBOBS_API_MAJOR_VER) + "." +
 			QString::number(LIBOBS_API_MINOR_VER) + "." +
 			QString::number(LIBOBS_API_PATCH_VER) +
-			bitness);
+			bitness +
+			". Fork by Codsworth");
 
 	ui->contribute->setText(QTStr("About.Contribute"));
 	ui->donate->setText("<a href='https://obsproject.com/donate'>" +
